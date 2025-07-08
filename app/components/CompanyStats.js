@@ -1,41 +1,45 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import React, { useEffect, useState } from "react";
+import {
+  Users,
+  HeartHandshake,
+  Handshake,
+  TrendingUp,
+} from "lucide-react"; // Modern icons
 
 const stats = [
-  { icon: "🚀", target: 200, label: "Referral Clients", suffix: "+" },
-  { icon: "🏢", target: 14, label: "Tech Partners", suffix: "+" },
-  { icon: "🎯", target: 8, label: "Int. Gold Partners", suffix: "+" },
-  { icon: "📈", target: 25, label: "Revenue Increased", suffix: "M+" },
+  {
+    target: 200,
+    label: "Referral Clients",
+    suffix: "+",
+    icon: <Users size={36} className="text-red-500 mb-3" />,
+  },
+  {
+    target: 14,
+    label: "Tech Partners",
+    suffix: "+",
+    icon: <HeartHandshake size={36} className="text-blue-500 mb-3" />,
+  },
+  {
+    target: 8,
+    label: "Int. Gold Partners",
+    suffix: "+",
+    icon: <Handshake size={36} className="text-yellow-400 mb-3" />,
+  },
+  {
+    target: 25,
+    label: "Revenue Increased",
+    suffix: "M+",
+    icon: <TrendingUp size={36} className="text-green-500 mb-3" />,
+  },
 ];
 
-const StatCard = ({ icon, target, label, suffix }) => {
+const StatCard = ({ target, label, suffix, icon }) => {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          animateCount();
-          setHasAnimated(true);
-          observer.unobserve(ref.current);
-        }
-      },
-      { threshold: 0.6 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [hasAnimated]);
-
-  const animateCount = () => {
     let start = 0;
-    const duration = 1500;
+    const duration = 1000;
     const increment = target / (duration / 16);
 
     const step = () => {
@@ -49,84 +53,51 @@ const StatCard = ({ icon, target, label, suffix }) => {
     };
 
     requestAnimationFrame(step);
-  };
+  }, [target]);
 
   return (
-    <div
-      ref={ref}
-      className="bg-white/5 backdrop-blur-lg border border-white/20 text-white rounded-2xl p-6 shadow-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300"
-    >
-      <div className="text-5xl mb-2">{icon}</div>
-      <div className="text-4xl font-extrabold text-cyan-300">
-        {count}
-        {count === target && suffix}
+    <div className="relative group rounded-xl p-[2px] bg-gradient-to-tr from-gray-400 via-gray-500 to-gray-400 shadow-xl hover:shadow-white transition-transform transform hover:scale-105">
+      <div className="bg-white/90 text-gray-900 backdrop-blur-lg rounded-xl px-6 py-8 text-center">
+        <div className="flex flex-col items-center">
+          {icon}
+          <div className="text-4xl font-extrabold text-gray-700 tracking-tight drop-shadow-sm">
+            {count}
+            {count === target && suffix}
+          </div>
+          <p className="mt-2 text-xs text-gray-600 font-semibold uppercase tracking-wide">
+            {label}
+          </p>
+        </div>
       </div>
-      <p className="text-sm mt-2 text-gray-300">{label}</p>
     </div>
   );
 };
 
 const CompanyStatsPage = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const elements = sectionRef.current.querySelectorAll(".stat-card");
-    gsap.fromTo(
-      elements,
-      { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-      }
-    );
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
-      className="relative py-16 px-6 bg-gradient-to-bl from-gray-300 via-gray-800 to-gray-300 text-white"
+      className="relative pb-20 pt-10 px-4 text-white bg-black bg-fixed bg-center bg-cover"
+      style={{
+        backgroundImage: `url('https://www.consultancy.uk/illustrations/news/detail/2024-05-27-122123105-Key_considerations_when_selecting_an_ERP_package.jpg')`,
+      }}
     >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center ju">
-        {/* Left: Heading + Stats */}
-        <div>
-            <div className="flex items-center justify-center my-4">
-  <div className="h-[2px] w-28 bg-red-700 mx-4"></div>
-  <p className="text-2xl  uppercase tracking-widest text-white font-bold">
-   Impact in numbers
-  </p>
-  <div className="h-[2px] w-28 bg-red-700 mx-4"></div>
-</div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 text-center py-10">
-            {stats.map((stat, index) => (
-              <div key={index} className="stat-card">
-                <StatCard {...stat} />
-              </div>
-            ))}
-          </div>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Heading */}
+        <div className="flex items-center justify-center mb-12">
+          <div className="h-[2px] w-24 bg-red-700 mx-4"></div>
+          <p className="text-2xl uppercase tracking-widest text-white font-bold text-center">
+            Performance Overview
+          </p>
+          <div className="h-[2px] w-24 bg-red-700 mx-4"></div>
         </div>
 
-        {/* Right: Video */}
-        <div className="w-full h-full rounded-xl overflow-hidden shadow-lg">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source
-              src="/assets/company-stats.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <StatCard key={index} {...stat} />
+          ))}
         </div>
       </div>
     </section>

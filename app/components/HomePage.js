@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 const HomeHero = () => {
   const headingRef = useRef(null);
@@ -26,7 +27,7 @@ const HomeHero = () => {
 
   return (
     
-    <div className="relative h-[60vh] md:h-[100vh] w-full text-white flex items-center justify-center bg-fixed flex-col px-6 py-12 overflow-hidden">
+    <div className="relative h-[70vh] md:h-[100vh] w-full bg-black text-white flex items-center justify-center bg-fixed flex-col px-6 py-12 overflow-hidden">
       {/* Video Background */}
       <video
         ref={videoRef}
@@ -37,14 +38,16 @@ const HomeHero = () => {
         playsInline
       >
         <source
-          src="/assets/home-videopage.mp4"
+          src="/assets/homepage-video.mp4"
           type="video/mp4"
         />
+        
+        
         Your browser does not support the video tag.
       </video>
 
       {/* Optional dark overlay */}
-      <div className="absolute inset-0 bg-black/70 z-0" />
+      <div className="absolute inset-0 bg-black/50 z-0" />
       
 
       {/* Foreground Content */}
@@ -61,12 +64,13 @@ const HomeHero = () => {
         >
           Streamline operations, boost productivity, and unlock insights with our intelligent ERP solutions.
         </p>
-        <button
+        <Link href="/contact"><button
           ref={buttonRef}
           className="bg-white text-black rounded-md px-10 py-3 font-semibold hover:bg-gray-200 transition"
         >
           GET IN TOUCH
         </button>
+        </Link>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import React from "react";
 const plans = [
   {
     name: "Classic Bronze",
-    price: "Rs. 4.5 Lac",
+    price: "Rs. 15.5 Lakh",
     highlight: false,
     features: [
       "Lifetime Subscription",
@@ -30,7 +30,7 @@ const plans = [
   },
   {
     name: "Pro Silver",
-    price: "Rs. 8.5 Lac",
+    price: "Rs. 35.5 Lakh",
     highlight: true,
     features: [
       "Lifetime Subscription",
@@ -55,7 +55,7 @@ const plans = [
   },
   {
     name: "Ultra Gold",
-    price: "Rs. 18 Lac",
+    price: "Rs. 90 Lakh",
     highlight: false,
     features: [
       "Lifetime Subscription",
@@ -80,7 +80,7 @@ const plans = [
   },
   {
     name: "Super Platinum",
-    price: "Rs. 25 Lac",
+    price: "Rs. 2.5 Crore",
     highlight: false,
     features: [
       "Lifetime Subscription",
@@ -109,7 +109,14 @@ export default function PricingTable() {
   return (
     <section className=" px-4 bg-gradient-to-br from-gray-50 to-white text-gray-800  py-24">
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-extrabold mb-2">Choose Your Plan</h2>
+        <div className="flex items-center justify-center mb-12">
+          <div className="h-[2px] w-24 bg-red-700 mx-4"></div>
+          <p className="text-3xl uppercase tracking-widest text-black font-bold">
+            Choose your plan
+          </p>
+          <div className="h-[2px] w-24 bg-red-700 mx-4"></div>
+        </div>
+
         <p className="text-gray-600">Flexible ERP packages tailored to your business needs.</p>
       </div>
 

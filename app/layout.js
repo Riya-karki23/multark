@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import PreLoader from "./components/PreLoader";
+import SplashCursor from "./components/CursorAnimation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,10 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
        <body style={{ display: 'flex', flexDirection: 'column'}}>
-        {/* <PreLoader/> */}
+        <SplashCursor/>
         <Header />
 
-        <main style={{  backgroundColor:'white' }}>
+        <main>
           {children}
         </main>
 

@@ -4,7 +4,7 @@ import React from 'react';
 const industries = [
   {
     name: 'Consumer Packaged Goods',
-    image: 'https://www.retailtouchpoints.com/wp-content/uploads/2024/11/Online-shopping-FokkeBaarssen-960x540.jpg',
+    image: 'https://www.shutterstock.com/image-photo/african-american-woman-taking-milk-600nw-2493027475.jpg',
   },
   {
     name: 'Pharmaceuticals',
@@ -38,47 +38,36 @@ const industries = [
 
 const Industries = () => {
   return (
-    <div className="bg-white py-10">
-      <style>
-        {`
-          @keyframes scrollMarquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .marquee-track {
-            animation: scrollMarquee 40s linear infinite;
-          }
-          .marquee-wrapper:hover .marquee-track {
-            animation-play-state: paused;
-          }
-        `}
-      </style>
+    <div className="bg-gray-50 py-14 px-6">
+      <div className="text-center mb-10">
+        <div className="flex items-center justify-center mb-3">
+          <div className="h-[2px] w-24 bg-red-700 mx-2" />
+          <h2 className="text-3xl uppercase tracking-wide text-gray-800 font-bold">
+            Industries We Serve
+          </h2>
+          <div className="h-[2px] w-24 bg-red-700 mx-2" />
+        </div>
+        <p className="text-gray-500 text-sm">
+          Serving a wide spectrum of industries with innovative solutions.
+        </p>
+      </div>
 
-      
-
-      <div className="flex items-center justify-center my-4">
-  <div className="h-[2px] w-28  bg-red-700 mx-4"></div>
-  <p className="text-2xl  uppercase tracking-widest text-gray-700 font-bold">
-   Industries we served
-  </p>
-  <div className="h-[2px] w-28 bg-red-700 mx-4"></div>
-</div>
-        
-
-      <div className="overflow-hidden relative w-full marquee-wrapper">
-        <div className="flex gap-6 px-4 whitespace-nowrap w-max marquee-track py-10">
-          {[...industries, ...industries].map((item, index) => (
+      <div className="overflow-x-auto scrollbar-hide">
+        <div className="flex gap-6 px-4 py-6 w-max mx-auto">
+          {industries.map((item, index) => (
             <div
               key={index}
-              className="w-[240px] h-[260px] bg-white rounded-2xl shadow-md hover:shadow-gray-500 transition-shadow duration-300 overflow-hidden border border-gray-100"
+              className="min-w-[240px] max-w-[240px] rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-xl transform hover:scale-[1.03] hover:border-red-600 transition duration-300 cursor-pointer"
             >
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-[70%] object-cover rounded-t-2xl"
+                className="h-44 w-full object-cover"
               />
-              <div className="p-2 text-center font-semibold text-gray-800 text-sm pt-8">
-                {item.name}
+              <div className="p-4 text-center">
+                <p className="text-base font-semibold text-gray-800 leading-snug">
+                  {item.name}
+                </p>
               </div>
             </div>
           ))}

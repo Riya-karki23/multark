@@ -5,11 +5,10 @@ import { useEffect, useState } from "react";
 export default function Header() {
   const navLinks = [
     { nav: "HOME", href: "/" },
-    { nav: "ABOUT", href: "/about" },
+    { nav: "SOLUTIONS", href: "/solutions" },
     { nav: "SERVICES", href: "/services" },
     { nav: "PRICING", href: "/pricing" },
-    { nav: "BLOGS", href: "/blogs" },
-    { nav: "CONTACT", href: "/contact" },
+    { nav: "ABOUT", href: "/about" },
   ];
 
   const [menu, setMenu] = useState(false);
@@ -28,11 +27,13 @@ export default function Header() {
   }, [lastScrollY]);
 
   return (
-    <header
-      className={`${
-        showNavbar ? "top-0" : "-top-20"
-      } bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800/80 backdrop-blur-lg fixed z-[100] w-full transition-all duration-500 shadow-md`}
-    >
+  <header
+  className={`${
+    showNavbar ? "top-0" : "-top-20"
+  } bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-black/80 backdrop-blur-lg fixed z-[100] w-full transition-all duration-500 shadow-md`}
+>
+
+
       <div className="flex justify-between items-center px-3 py-4 md:px-12">
         <div>
           <Link href="/">
