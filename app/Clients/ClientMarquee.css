@@ -1,7 +1,6 @@
 .clients-section {
   background: #f9f9f9;
   padding: 4rem 1rem;
-  margin-bottom: 4rem;
 }
 
 .clients-heading {
@@ -9,7 +8,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .clients-heading h2 {
@@ -23,7 +22,7 @@
 .clients-heading .line {
   height: 2px;
   width: 60px;
-  background-color: #e11d48; /* red-600 */
+  background-color: #e11d48;
 }
 
 .marquee {
@@ -33,30 +32,13 @@
 
 .marquee-track {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   width: max-content;
   animation: scroll 40s linear infinite;
 }
 
 .marquee:hover .marquee-track {
   animation-play-state: paused;
-}
-
-.marquee-track img {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.85;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.marquee-track img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
 }
 
 @keyframes scroll {

@@ -1,6 +1,12 @@
 "use client";
 import React from "react";
 import "./ClientMarquee.css";
+import Image from "next/image";
+
+const clientLogos = [
+  "1.png", "4.png", "5.png", "6.png", "9.png", "10.png", "11.png",
+  "13.png", "15.png", "16.png", "19.png"
+];
 
 const ClientMarquee = () => {
   return (
@@ -15,26 +21,19 @@ const ClientMarquee = () => {
       {/* Marquee */}
       <div className="marquee">
         <div className="marquee-track">
-          <img src="/clients-img/1.png" alt="Client 1" />
-          <img src="/clients-img/4.png" alt="Client 4" />
-          <img src="/clients-img/5.png" alt="Client 5" />
-          <img src="/clients-img/6.png" alt="Client 6" />
-          <img src="/clients-img/9.png" alt="Client 9" />
-          <img src="/clients-img/10.png" alt="Client 10" />
-          <img src="/clients-img/11.png" alt="Client 11" />
-          <img src="/clients-img/14.png" alt="Client 14" />
-          <img src="/clients-img/16.png" alt="Client 16" />
-
-          {/* Duplicates for smooth loop */}
-          <img src="/clients-img/1.png" alt="Client 1" />
-          <img src="/clients-img/4.png" alt="Client 4" />
-          <img src="/clients-img/5.png" alt="Client 5" />
-          <img src="/clients-img/6.png" alt="Client 6" />
-          <img src="/clients-img/9.png" alt="Client 9" />
-          <img src="/clients-img/10.png" alt="Client 10" />
-          <img src="/clients-img/11.png" alt="Client 11" />
-          <img src="/clients-img/14.png" alt="Client 14" />
-          <img src="/clients-img/16.png" alt="Client 16" />
+          {clientLogos.concat(clientLogos).map((file, i) => (
+            <div
+              key={i}
+              className="relative h-[60px] w-auto aspect-[2/1] flex-shrink-0"
+            >
+              <Image
+                src={`/clients-img/${file}`}
+                alt={`Client ${file}`}
+                fill
+                className="object-contain grayscale opacity-85 transition-all duration-300 hover:grayscale-0 hover:opacity-60 hover:scale-105"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
