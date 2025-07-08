@@ -91,7 +91,7 @@ export default function Footer() {
 </div>
 </div>
 <div>
-  <p>Tell us about your business — we're excited to help you grow with smart ERP solutions.</p>
+  <p>Tell us about your business — we&apos;re excited to help you grow with smart ERP solutions.</p>
   <p>
     Reach out at &nbsp;
     <a

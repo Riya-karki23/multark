@@ -18,7 +18,7 @@ const refundPolicy = () => {
 
 <p>You are eligible for a full reimbursement <strong>within 14 calendar days</strong> of your purchase.</p>
 
-<p>After the 14-day period, you will no longer be eligible and won't be able to receive a refund. We encourage our customers to try the product (or service) in the first two weeks after purchase to ensure it fits their needs.</p>
+<p>After the 14-day period, you will no longer be eligible and won&apos;t be able to receive a refund. We encourage our customers to try the product (or service) in the first two weeks after purchase to ensure it fits their needs.</p>
 
 <p>All refunds will be returned in <strong>INR (Indian Rupees)</strong> as per the current exchange rate on the day of refund processing.</p>
 

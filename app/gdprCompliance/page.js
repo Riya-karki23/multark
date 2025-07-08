@@ -11,14 +11,14 @@ const page = () => {
         <section className="mb-6">
           <h4 className="text-lg font-semibold mb-2">GDPR Commitment</h4>
           <p>
-            Crisco has always honored its users’ rights to data privacy and protection.
+            Crisco has always honored its users rights to data privacy and protection.
           </p>
         </section>
 
         <section className="mb-6">
           <h4 className="text-lg font-semibold mb-2">What is GDPR?</h4>
           <p>
-            GDPR is an EU-wide privacy and data protection law that regulates how EU residents' data is protected by companies and enhances the control the EU residents have over their personal data.
+            GDPR is an EU-wide privacy and data protection law that regulates how EU residents data is protected by companies and enhances the control the EU residents have over their personal data.
           </p>
         </section>
 

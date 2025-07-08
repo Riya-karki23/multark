@@ -11,15 +11,15 @@ const page = () => {
   </h2>
 
   <p className="mb-4">
-    The Internet is an amazing tool. It has the power to change the way we live, and we're starting to see that potential today. With only a few mouse-clicks, you can follow the news, look up facts, buy goods and services, and communicate with others from around the world.
+    The Internet is an amazing tool. It has the power to change the way we live, and we&apos;re starting to see that potential today. With only a few mouse-clicks, you can follow the news, look up facts, buy goods and services, and communicate with others from around the world.
   </p>
 
   <p className="mb-4">
-    It's important to Ordnungskraft IT Advisory Private Limited to help our customers retain their privacy when they take advantage of all the Internet has to offer.
+    It&apos;s important to Ordnungskraft IT Advisory Private Limited to help our customers retain their privacy when they take advantage of all the Internet has to offer.
   </p>
 
   <p className="mb-4">
-    We believe your business is no one else's. Your privacy is important to you… and to us. So we'll protect the information you share with us.
+    We believe your business is no one else&apos;s. Your privacy is important to you… and to us. So we&apos;ll protect the information you share with us.
   </p>
 
   <p className="mb-4">
@@ -27,8 +27,8 @@ const page = () => {
   </p>
 
   <ul className="list-disc list-inside mb-6">
-    <li>We won’t sell or give away your name, mail address, phone number, email address, credit card number, or any other information to anyone.</li>
-    <li>We’ll use state-of-the-art security measures to protect your information from unauthorized users.</li>
+    <li>We won&apos;t sell or give away your name, mail address, phone number, email address, credit card number, or any other information to anyone.</li>
+    <li>We&apos;ll use state-of-the-art security measures to protect your information from unauthorized users.</li>
   </ul>
 
   <h3 className="text-xl font-semibold mt-6 mb-2">NOTICE</h3>
@@ -70,7 +70,7 @@ const page = () => {
   <p className="mb-4">You can always ensure your personal information is correct and up to date. At the Visitor Center, you can:</p>
 
   <ul className="list-disc list-inside mb-6">
-    <li>View and edit personal information you’ve already provided.</li>
+    <li>View and edit personal information you&apos;ve already provided.</li>
     <li>Choose whether to receive marketing messages from us.</li>
     <li>Decide whether third parties may contact you with offers.</li>
   </ul>
