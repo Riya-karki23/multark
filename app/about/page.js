@@ -86,7 +86,7 @@ const AboutPage = () => {
         <div className="mb-16">
           <div className="flex justify-center items-center mb-4">
             <div className="h-[2px] w-20 bg-red-600 mx-4" />
-            <h2 className="text-4xl font-extrabold uppercase tracking-widest">
+            <h2 className="text-2xl md:text-3xl font-extrabold uppercase tracking-widest">
               Who we are
             </h2>
             <div className="h-[2px] w-20 bg-red-600 mx-4" />

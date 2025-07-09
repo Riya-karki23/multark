@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-black text-white text-center py-6 px-4 space-y-6">
@@ -6,11 +7,14 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row gap-12 justify-between items-center md:px-44 md:pt-10 ">
       <div className="md:flex-1 flex flex-col  justify-center items-center gap-6 pr-4 b md:border-r-0 text-gray-400">
         <Link href="/">
-          <img
-            src="https://erp.multark.com/files/multark-website-logo.png"
-            alt="logo-img"
-            className="h-8 md:h-12"
-          />
+ <Image
+              src="/assets/multark-website-logo.png"
+              alt="logo-img"
+             height={60}
+             width={150}
+            />
+
+
           </Link>
         <div>
           <p className="text-sm text-gray-200">Branded By</p>
@@ -49,7 +53,7 @@ export default function Footer() {
 
      <div className="md:flex-1 flex flex-col gap-2 text-gray-400 ">
       <div className="flex gap-5 items-center justify-center">
-  <p className="text-white text-2xl font-semibold mb-1">Let's Connect</p>
+  <p className="text-white text-2xl font-semibold mb-1">Let&apos;s Connect</p>
   <div className="relative w-[60px] h-[60px] rotate-180">
   <button
     className="group relative w-full h-full outline-none border-none bg-transparent cursor-pointer overflow-hidden"

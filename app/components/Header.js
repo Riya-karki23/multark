@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -37,16 +38,17 @@ export default function Header() {
       <div className="flex justify-between items-center px-3 py-4 md:px-12">
         <div>
           <Link href="/">
-            <img
-              src="https://erp.multark.com/files/multark-website-logo.png"
+            <Image
+              src="/assets/multark-website-logo.png"
               alt="logo-img"
-              className="h-9 md:h-12"
+             height={60}
+             width={150}
             />
           </Link>
         </div>
 
         <div onClick={() => setMenu(true)} className="md:hidden">
-          <img src="/icons/menu.svg" alt="Menu Icon" width="32" height="32" />
+          <Image src="/icons/menu.svg" alt="Menu Icon" width={40} height={32} />
         </div>
 
         {/* Desktop Nav */}
@@ -82,7 +84,7 @@ export default function Header() {
           className="flex justify-end py-8 opacity-80"
           onClick={() => setMenu(false)}
         >
-          <img src="/icons/cross.svg" alt="close-icon" className="h-10" />
+          <Image src="/icons/cross.svg" alt="close-icon" width={50} height={32}  />
         </div>
 
         <ul className="text-center flex flex-col gap-3 text-xl text-white">

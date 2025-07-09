@@ -49,7 +49,7 @@ const ServicesSection = () => {
   </div>
 
   {/* Main Heading */}
-  <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+  <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 leading-tight">
     Innovations&nbsp;
     <span className="text-red-600">and</span>&nbsp;Impact
   </h2>
