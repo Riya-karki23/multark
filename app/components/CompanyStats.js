@@ -78,7 +78,7 @@ const CompanyStatsPage = () => {
     <section
       className="relative pb-20 pt-10 px-4 text-white bg-black bg-fixed bg-center bg-cover"
       style={{
-        backgroundImage: `url('https://www.consultancy.uk/illustrations/news/detail/2024-05-27-122123105-Key_considerations_when_selecting_an_ERP_package.jpg')`,
+        backgroundImage: `url('/assets/companyStats-bg.jpg')`,
       }}
     >
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0"></div>

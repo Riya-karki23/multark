@@ -7,7 +7,7 @@ const ContactPage = () => {
       id="contact"
       className="relative w-full text-white py-28 px-6 bg-fixed bg-center bg-cover"
       style={{
-        backgroundImage: `url('https://www.shutterstock.com/image-vector/contact-us-customer-support-hotline-600nw-2407847227.jpg')`, 
+        backgroundImage: `url('/assets/contact-bg.webp')`, 
       }}
     >
       {/* Overlay */}

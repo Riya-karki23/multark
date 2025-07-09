@@ -11,7 +11,7 @@ import PricingTable from "./pricing/page";
 const page = () => {
   return (
     <>
-    <HomeHero/>
+      <HomeHero/>
       <ServicesSection/>
       <AboutPage/>
       <Industries/>

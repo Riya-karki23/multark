@@ -1,38 +1,39 @@
 'use client';
+import Image from 'next/image';
 import React from 'react';
 
 const industries = [
   {
     name: 'Consumer Packaged Goods',
-    image: 'https://www.shutterstock.com/image-photo/african-american-woman-taking-milk-600nw-2493027475.jpg',
+    image: '/industries-img/consumer-packed-goods.webp',
   },
   {
     name: 'Pharmaceuticals',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjciirxM95AQlD99e5MSg4tXY7s4wMExWUw&s',
+    image: '/industries-img/pharma.jpg',
   },
   {
     name: 'Automotive',
-    image: 'https://images.ctfassets.net/v7wr16nrr0mz/4TDbNAhdMu1Gbl4WBDoHSn/519159862b2319133092f2e833b72aea/automotive-industry-trends-banner-1920x1080.jpg',
+    image: '/industries-img/automotive.jpg',
   },
   {
     name: 'Construction',
-    image: 'https://www.letsbuild.com/wp-content/uploads/2023/07/Depositphotos_89120612_s-2019.jpg',
+    image: '/industries-img/construction.jpg',
   },
   {
     name: 'Retail and e-Commerce',
-    image: 'https://www.resultfirst.com/wp-content/uploads/2024/04/Untitled-16-1024x576.png',
+    image: '/industries-img/retail-commerce.png',
   },
   {
     name: 'Engineering',
-    image: 'https://dropinblog.net/34252894/files/featured/Blog_Heros_10.webp',
+    image: '/industries-img/engineering.webp',
   },
   {
     name: 'Healthcare',
-    image: 'https://www.t-systems.com/resource/image/1016608/ratio3x2/1440/960/ecb523ac0e35f710bea75a1c42dd9792/AB71527C68B769F6BFE0253C7C21C191/im-cloud-as-enabler-for-healthcare-digitalization.jpg',
+    image: '/industries-img/healthcare.jpg',
   },
   {
     name: 'Education',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeLM2RkA2Uipu0Jy-CBqTAtydHs3dB779FLA4Qb3IHVYQCfm4ZYPttldI503OUY3LErYM&usqp=CAU',
+    image: '/industries-img/education.jpg',
   },
 ];
 
@@ -53,17 +54,20 @@ const Industries = () => {
       </div>
 
       <div className="overflow-x-auto scrollbar-hide">
-        <div className="flex gap-6 px-4 py-6 w-max mx-auto">
+        <div className="flex gap-7 px-4 py-6 w-max mx-auto">
           {industries.map((item, index) => (
             <div
               key={index}
-              className="min-w-[240px] max-w-[240px] rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-xl transform hover:scale-[1.03] hover:border-red-600 transition duration-300 cursor-pointer"
+              className="min-w-[260px] max-w-[280px] rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-xl transform hover:scale-[1.04] 0 transition duration-300 cursor-pointer"
             >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="h-44 w-full object-cover"
-              />
+              <div className="relative w-full h-[200px]">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="p-4 text-center">
                 <p className="text-base font-semibold text-gray-800 leading-snug">
                   {item.name}
